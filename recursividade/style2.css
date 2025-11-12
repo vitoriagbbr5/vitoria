@@ -1,0 +1,33 @@
+@charset "Utf-8";
+img{
+max-width: 100%;
+display:block;
+
+}
+.grid{
+    display:grid;
+    grid-template-columns:  1fr 1fr 200px;
+ gap: 20px;
+ max-width: 800px;
+ padding: 10px;
+margin:0 auto
+
+}
+
+.slidebar>div{
+    margin-bottom: 10px;
+}
+
+@media(max-width:600px){
+    .grid2{
+        grid-template-columns: 1fr;
+    }
+    .slidebar{
+display: flex;
+overflow: scroll;
+    }
+    .slidebar>div{
+flex: 1 0 200px;
+margin: 0 10px;
+    }
+}

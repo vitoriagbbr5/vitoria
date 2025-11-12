@@ -1,0 +1,86 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Young+Serif&display=swap');
+
+h1{
+ font-family: "Young Serif", serif;
+  font-weight: 400px;
+  font-style:normal;
+  font-size: 100px;
+}
+
+img{
+max-width: 100%;
+display:block
+
+}
+
+.flexbox{
+display:flex;
+flex-wrap: wrap;
+max-width: 800px;
+margin: 0 auto;
+}
+
+.flexbox > div{
+flex: 1 1 200px;
+margin:10px;
+
+}
+
+.flexbox div p{
+text-align: center;
+font-size: 12px;
+}
+.grid1{
+display: grid; grid-template-columns: repeat(3,1fr);
+max-width: 800px;
+padding: 10px;
+margin: 0 auto;
+gap: 20px;
+}
+.grid1 > div:nth-child(1){
+    display:grid;
+    grid-template-columns: repeat(2,1 fr);
+    gap: 10px;
+    align-items:center;
+
+
+}
+.grid1>div.anuncio{
+grid-column: 1;
+grid-row: 2 / 5;
+display:block;
+border: 3px solid;
+}
+
+.grid1 div p{
+  text-align: center;
+}
+
+@media(max-width:600px){
+  .grid1{
+    grid-template-columns: repeat(2,1fr);
+  }
+}
+.grid1>div:nth-child(n + 4){
+  display: block;
+}
+
+.grid1>div.anuncio{
+  grid-column: auto;
+  grid-row: auto;
+  order: -1;
+}
+  .grid2{
+display: grid;
+ grid-template-columns: 1fr 1fr 200px;
+ gap: 20px;
+ max-width: 800px;
+ padding: 10px;
+ margin: 0 auto;
+  }
+
+  .slidebar > div{
+    margin-bottom: 10px;
+  }
+ 
